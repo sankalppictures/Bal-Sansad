@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bal Sansad EVM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1 id="schoolName">YOUR SCHOOL NAME</h1>
+      <div class="change-school-name" onclick="changeSchoolName()">✎</div>
+      <h2>BAL SANSAD EVM</h2>
+    </header>
+
+    <!-- Candidates List -->
+    <div class="candidates-list" id="candidatesList">
+      <!-- Candidates will be dynamically added here -->
+    </div>
+
+    <!-- Add Candidate Button -->
+    <div class="add-candidate">
+      <button onclick="addCandidate()">+ ADD MORE CANDIDATE</button>
+      <button onclick="openChangeNameModal()">CHANGE CANDIDATE NAME</button>
+    </div>
+
+    <!-- Results Button -->
+    <div class="results">
+      <button onclick="getResults()">GET RESULT</button>
+    </div>
+
+    <!-- Change Name Modal -->
+    <div class="modal" id="changeNameModal">
+      <div class="modal-content">
+        <span class="close" onclick="closeChangeNameModal()">&times;</span>
+        <h3>Change Candidate Name</h3>
+        <select id="candidateSelect">
+          <!-- Options will be dynamically added here -->
+        </select>
+        <input type="text" id="newName" placeholder="Enter new name">
+        <button onclick="changeCandidateName()">Update Name</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
